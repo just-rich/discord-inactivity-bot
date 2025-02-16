@@ -8,7 +8,7 @@ The Discord Activity Bot is designed to help manage user activity within a Disco
 1. When bot starts, it fetches all the messages in specified channels going back 31 days or the specified time period.
 2. After fetching messages in all channels, it updates `users.db` with all user IDs and the timestamp of their most recent message.
 3. For users who have no messages in specified channels, it will use the date/time of when they joined the server for their timestamp.
-4. For users who haven't sent any messages within 14 days after their timestamp, it sends a warning message in the specified channel pinging the user & informing them they have not been inactive within the last 14 days. (Doesn't send this message more than once every 14 days to a user.)
+4. For users who haven't sent any messages within 14 days after their timestamp, it sends a warning message in the specified channel pinging the user & informing them they have been inactive within the last 14 days. (Doesn't send this message more than once every 14 days to a user.)
 5. When users have not sent a message in any specified channels for 30 days after their timestamp, they have the specified role removed.
 6. If bot doesn't have permissions to view or send messages in the specified warning/inactivity channel, it will skip sending warning message & move onto role removal from inactive users.
 
@@ -94,3 +94,6 @@ The Discord Activity Bot is designed to help manage user activity within a Disco
 ```sh
 node index.js
 ```
+
+---
+Slapped together by [rich](https://richw.xyz)
